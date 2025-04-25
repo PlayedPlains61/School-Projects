@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Car Rental</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" media="print" href="print.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1><a href="index.html">Register for a Rental Car Today</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <p>
+                To register for a rental car today, please fill out the
+                information below.  You can either submit the form 
+                as a pdf file in an email sent to us or you can print out
+                the registered information and bring it into our offices
+                the day you need to rent one of our vehicles.  Payment will
+                be completed onsite.
+            </p>
+            <p>&#36;300 minimum down payment</p>
+            <div id="selectedCar">
+                <form method="post" enctype="text/plain">
+                    <label for="firstname">First Name:</label><br>
+                    <input type="text" id="firstname" name="fn" required placeholder="Enter first name" size="20"><br>
+
+                    <label for="lastname">Last Name:</label><br>
+                    <input type="text" id="lastname" name="ln" required placeholder="Enter last name" size="20"><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="em" required placeholder="Enter a valid E-Mail" size="20"><br>
+
+                    <label for="days">Days (Max 10):</label><br>
+                    <input type="range" id="days" name="days" min='1' max='10'><br>
+                    <label>&nbsp;&nbsp;1 2 3 4 5 6 7 8 9 10</label><br>
+                    <br>
+                    <select id="cars" name="cars">
+                        <option selected="selected">Select a Car</option>
+                        <option value="Chevy Suburban">Chevy Suburban</option>
+                        <option value="Ford F-150">Ford F-150</option>
+                        <option value="Volkswagen Atlas">Volkswagen Atlas</option>
+                        <option value="Nissan Altima">Nissan Altima</option>
+                        <option value="Jeep Compass">Jeep Compass</option>
+                        <option value="Toyota Rav 4">Toyota Rav 4</option>
+                    </select>
+
+                    <select id="colors" name="colors">
+                        <option selected="selected">Select a Color</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                        <option value="Grey">Grey</option>
+                        <option value="Tan">Tan</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Red">Red</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <br>
+                <div id="registerForm">
+                    <h2>Registration Form:</h2>
+                    <p>First Name: <span id='fn'></span></p>
+                    <p>Last Name: <span id='ln'></span></p>
+                    <p>Email: <span id='em'></span></p>
+                    <p>Days: <span id='da'></span></p>
+                    <p>Make&#47;Model: <span id='car'></span></p>
+                    <p>Color: <span id='color'></span></p>
+                    <p>Miles: <span id='mi'></span></p>
+                    <p>Wheel Drive: <span id='dr'></span></p>
+                    <p>Year: <span id='ye'></span></p>
+                    <p>Cost: <span id='cost'></span></p>
+                </div>
+                <input type="button" value="Save or Print Form" onclick='window.print();return false;'>
+            </div>
+        </div>
+        <footer>
+            Copyright &copy; 2023 Car Rental<br>
+            Contact Us: <a href="mailto:car@rental.com">car@rental.com</a> 111-222-3333
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

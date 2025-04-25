@@ -1,0 +1,10 @@
+body{
+    visibility:collapse;
+    margin-top:-100000px;
+}
+
+/**Printable**/
+#registerForm{
+    visibility: visible;
+    margin-top:99800px;
+}
